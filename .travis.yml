@@ -10,7 +10,7 @@ deploy:
   provider: pages
   skip-cleanup: true
   github-token: $GITHUB_TOKEN
-  local_dir: ./client/build
+  local_dir: ./build
   repo: christopherkade/lockdown.center
   fqdn: lockdown.center
   target_branch: gh-pages
