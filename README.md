@@ -1,6 +1,6 @@
 <h1 align="center">Welcome to lockdown.center 👋</h1>
 <p>
-  <a href="https://twitter.com/christo'kade" target="_blank">
+  <a href="https://twitter.com/christo_kade" target="_blank">
     <img alt="Twitter: christo_kade" src="https://img.shields.io/twitter/follow/christo_kade.svg?style=social" />
   </a>
 </p>
