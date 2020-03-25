@@ -1,23 +1,67 @@
 import React from 'react';
-import ReactPlayer from 'react-player'
+import styled from 'styled-components'
 
-import P5Wrapper from 'react-p5-wrapper';
-import sketch from './sketch';
+import Title from 'components/Title.js'
+import Subtext from 'components/Subtext.js'
+import Illustration from 'components/Illustration.js'
+import SearchBlock from 'components/SearchBlock.js'
 
-const p5styles = {
-  position: 'absolute',
-  width: '100%',
-  height: '100%',
-  zIndex: '-1'
-}
+import { device } from 'device.js'
 
-function App() {
+const Wrapper = styled.div`
+  display: flex;
+  height: 100%;
+  justify-content: center;
+`
+
+const TextWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+
+  @media ${device.tablet} {
+    margin: 0 40px;
+  }
+
+  @media ${device.mobileM} {
+    margin: 0 20px;
+  }
+`
+
+const ImageLinkWrapper = styled.p`
+  position: absolute;
+  bottom: 0;
+  font-size: 0.75rem;
+  align-self: center;
+`
+
+const ImageLink = styled.a`
+  color: #ffb6b9;
+`
+
+const App = () => {
   return (
-    <div>
-      <ReactPlayer style={p5styles} width="100%" height="100%" url='https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&loop=1&controls=0&autohide=1&showinfo=0&modestbranding=1' playing />
-      <P5Wrapper sketch={sketch}></P5Wrapper>
-    </div>
+    <Wrapper>
+      <TextWrapper>
+        <Title>
+          Keep your <br />
+          mind occupied.
+        </Title>
+        <Subtext>
+          Finding fun things to do during the lockdown.
+        </Subtext>
+
+        <SearchBlock />
+
+        <ImageLinkWrapper>
+          Art by <ImageLink href="https://www.opendoodles.com/">opendoodles.com</ImageLink>
+        </ImageLinkWrapper>
+      </TextWrapper>
+
+      <Illustration />
+    </Wrapper>
   )
 }
 
-export default App;
+export default App
