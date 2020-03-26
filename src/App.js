@@ -31,7 +31,7 @@ const TextWrapper = styled.div`
 
 const ImageLinkWrapper = styled.p`
   position: absolute;
-  bottom: 0;
+  bottom: ${props => props.bottom}px;
   font-size: 0.75rem;
   align-self: center;
 `
@@ -54,8 +54,12 @@ const App = () => {
 
         <SearchBlock />
 
-        <ImageLinkWrapper>
-          Art by <ImageLink href="https://www.opendoodles.com/">opendoodles.com</ImageLink>
+        <ImageLinkWrapper bottom={20}>
+          Art by <ImageLink href="https://www.opendoodles.com/">opendoodles.com</ImageLink>.
+        </ImageLinkWrapper>
+
+        <ImageLinkWrapper bottom={0}>
+          Contribute links on <ImageLink href="https://github.com/christopherkade/lockdown.center">Github</ImageLink>.
         </ImageLinkWrapper>
       </TextWrapper>
 
