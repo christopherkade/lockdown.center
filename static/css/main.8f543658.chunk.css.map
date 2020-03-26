@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.css"],"names":[],"mappings":"AAAA,gBACE,QAAS,CACT,WAAY,CACZ,mCACF","file":"main.8f543658.chunk.css","sourcesContent":["body, html, #root {\n  margin: 0;\n  height: 100%;\n  font-family: 'Montserrat', sans-serif;\n}\n"]}
